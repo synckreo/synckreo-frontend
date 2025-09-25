@@ -138,6 +138,7 @@
 
     --color-primary: #f57c00;
     --color-secondary: #1a237e;
+    --color-charcoal: #262626
 }
 
 body {
@@ -154,4 +155,16 @@ h2 {
 
 p {
     @apply font-sans text-p;
+}
+
+.color-primary {
+    color: var(--color-primary);
+}
+
+.color-secondary {
+    color: var(--color-secondary);
+}
+
+.color-charcoal {
+    color: var(--color-charcoal);
 }

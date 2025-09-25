@@ -1,15 +1,26 @@
 import React from 'react';
 
-export const Navbar = () => {
+export const Navbar = ({ onHomePage }) => {
+  const linkColor = onHomePage ? 'text-white' : 'color-charcoal';
+
   return (
-    <nav className="text-gray-700 justify-between flex items-center">
-      <span className="text-xl font-bold">MyApp</span>
-      <ul className="flex gap-6">
+    <nav className="justify-between flex items-center">
+      <ul className="flex gap-x-10">
         <li>
-          <a href="/">Explore Professionals & Companies</a>
+          <a
+            href="/"
+            className={`text-sm font-medium transition-colors duration-300 ${linkColor}`}
+          >
+            Explore Professionals & Companies
+          </a>
         </li>
         <li>
-          <a href="/about">Contact Us</a>
+          <a
+            href="/about"
+            className={`text-sm font-medium transition-colors duration-300 ${linkColor}`}
+          >
+            Contact Us
+          </a>
         </li>
       </ul>
     </nav>
