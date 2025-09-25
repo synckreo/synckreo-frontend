@@ -1,1 +1,157 @@
 @import "tailwindcss";
+
+/* General Sans */
+@font-face {
+    font-family: 'General Sans';
+    src: url('/src/assets/fonts/general-sans/GeneralSans-Regular.otf') format('opentype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'General Sans';
+    src: url('/src/assets/fonts/general-sans/GeneralSans-Italic.otf') format('opentype');
+    font-weight: 400;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'General Sans';
+    src: url('/src/assets/fonts/general-sans/GeneralSans-Bold.otf') format('opentype');
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'General Sans';
+    src: url('/src/assets/fonts/general-sans/GeneralSans-BoldItalic.otf') format('opentype');
+    font-weight: 700;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'General Sans';
+    src: url('/src/assets/fonts/general-sans/GeneralSans-Semibold.otf') format('opentype');
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'General Sans';
+    src: url('/src/assets/fonts/general-sans/GeneralSans-SemiboldItalic.otf') format('opentype');
+    font-weight: 600;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'General Sans';
+    src: url('/src/assets/fonts/general-sans/GeneralSans-Medium.otf') format('opentype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'General Sans';
+    src: url('/src/assets/fonts/general-sans/GeneralSans-MediumItalic.otf') format('opentype');
+    font-weight: 500;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'General Sans';
+    src: url('/src/assets/fonts/general-sans/GeneralSans-Light.otf') format('opentype');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'General Sans';
+    src: url('/src/assets/fonts/general-sans/GeneralSans-LightItalic.otf') format('opentype');
+    font-weight: 300;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'General Sans';
+    src: url('/src/assets/fonts/general-sans/GeneralSans-Extralight.otf') format('opentype');
+    font-weight: 200;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'General Sans';
+    src: url('/src/assets/fonts/general-sans/GeneralSans-ExtralightItalic.otf') format('opentype');
+    font-weight: 200;
+    font-style: italic;
+}
+
+/* Clash Display   */
+@font-face {
+    font-family: 'Clash Display';
+    src: url('/src/assets/fonts/clash-display/ClashDisplay-Regular.otf') format('opentype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Clash Display';
+    src: url('/src/assets/fonts/clash-display/ClashDisplay-Light.otf') format('opentype');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Clash Display';
+    src: url('/src/assets/fonts/clash-display/ClashDisplay-Extralight.otf') format('opentype');
+    font-weight: 200;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Clash Display';
+    src: url('/src/assets/fonts/clash-display/ClashDisplay-Medium.otf') format('opentype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Clash Display';
+    src: url('/src/assets/fonts/clash-display/ClashDisplay-Semibold.otf') format('opentype');
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Clash Display';
+    src: url('/src/assets/fonts/clash-display/ClashDisplay-Bold.otf') format('opentype');
+    font-weight: 700;
+    font-style: normal;
+}
+
+@theme {
+    --font-sans: "General Sans", sans-serif;
+    --font-display: "Clash Display", sans-serif;
+
+    --text-h1: 80px;
+    --text-h2: 14px;
+    --text-p: 16px;
+
+    --color-primary: #f57c00;
+    --color-secondary: #1a237e;
+}
+
+body {
+    @apply font-sans text-p;
+}
+
+h1 {
+    @apply font-display text-h1;
+}
+
+h2 {
+    @apply font-display text-h2;
+}
+
+p {
+    @apply font-sans text-p;
+}

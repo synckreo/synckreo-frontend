@@ -6,16 +6,10 @@ export const Navbar = () => {
       <span className="text-xl font-bold">MyApp</span>
       <ul className="flex gap-6">
         <li>
-          <a href="/">Home</a>
+          <a href="/">Explore Professionals & Companies</a>
         </li>
         <li>
-          <a href="/about">About</a>
-        </li>
-        <li>
-          <a href="/services">Services</a>
-        </li>
-        <li>
-          <a href="/dashboard">Dashboard</a>
+          <a href="/about">Contact Us</a>
         </li>
       </ul>
     </nav>
