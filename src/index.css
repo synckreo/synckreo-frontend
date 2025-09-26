@@ -168,3 +168,7 @@ p {
 .color-charcoal {
     color: var(--color-charcoal);
 }
+
+.heading-56 {
+    font-size: 56px !important;
+}
