@@ -15,7 +15,7 @@ export const Card = ({
   className = '',
 }) => {
   return (
-    <div className={`lg:max-w-80 h-full bg-gray-100 p-3 rounded-[16.47px] flex flex-col ${className}`}>
+    <div className={`lg:max-w-96 md:max-w-72 sm:max-w-60 h-full bg-gray-100 p-3 rounded-[16.47px] flex flex-col ${className}`}>
       <img src={image} alt={imageAlt} className="w-full rounded-lg" />
       
       <div className="flex justify-between my-3 items-center">
