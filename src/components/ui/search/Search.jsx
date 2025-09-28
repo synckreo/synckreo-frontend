@@ -9,18 +9,14 @@ export const Search = ({
   dropdownOptions,
   buttonTitle,
   onSearchClick = () => {},
+  searchInputBorderColor = 'border-gray-200'
 }) => {
-  if (!Array.isArray(dropdownOptions)) {
-    console.error(
-      "The 'dropdownOptions' prop must be an array of strings."
-    );
-    return null;
-  }
+  const showDropdown = Array.isArray(dropdownOptions) && dropdownOptions.length > 0;
 
   return (
     <div className="flex flex-col sm:flex-row items-center gap-2 w-full">
       <div className="w-full sm:flex-grow">
-        <div className="flex items-center bg-white border border-gray-200 rounded-lg px-4 py-3 w-full focus-within:ring-2 focus-within:ring-primary/50 transition-shadow">
+        <div className={`flex items-center bg-white border ${searchInputBorderColor} rounded-lg px-4 py-3 w-full focus-within:ring-2 focus-within:ring-primary/50 transition-shadow`}>
           <img
             src={searchIcon}
             alt="Search"
@@ -32,7 +28,8 @@ export const Search = ({
             placeholder={placeholder}
             className="flex-grow text-gray-700 outline-none bg-transparent"
           />
-
+          {
+            showDropdown && (
           <div className="relative flex items-center">
             <select className="appearance-none bg-transparent outline-none pr-8 font-medium text-gray-800 cursor-pointer">
               {dropdownOptions.map((option, index) => (
@@ -48,6 +45,9 @@ export const Search = ({
               className="absolute right-0 top-1/2 -translate-y-1/2 h-4 w-4 pointer-events-none"
             />
           </div>
+            )
+          }
+
         </div>
       </div>
 
