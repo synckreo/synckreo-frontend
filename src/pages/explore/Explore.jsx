@@ -9,7 +9,7 @@ import arrowIcon from "../../assets/icons/arrow.svg"
 export const Explore = () =>  (
   <main className="container mx-auto px-1 sm:px-2 lg:px-4">
   <section className="mt-24 h-min flex flex-col justify-center">
-    <div className="flex sm:flex-col md:flex-col lg:flex-row items-center gap-20 mb-10">
+    <div className="flex flex-col lg:flex-row items-center gap-20 mb-10">
       <div className="flex-1">
       <h1 className="leading-snug font-bold">
       <span className="block" style={{ height: '1.2em', overflow: 'hidden' }}>Build</span>
@@ -42,7 +42,7 @@ export const Explore = () =>  (
 
     {/* Professionals */}
     <div className="w-full">
-      <div className="flex justify-between items-center">
+      <div className="flex px-4 justify-between items-center">
         <h3 className="font-semibold text-primary text-2xl">Construction Professionals</h3>
       <Button
       title="Explore More"
@@ -54,7 +54,7 @@ export const Explore = () =>  (
       </div>
       {/* Card Container */}
       <div className="container mx-auto px-4 py-8">
-         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 items-stretch">
+         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 items-stretch">
            {data.professionals.map((professional) => (
             <Card
               key={professional.id}
@@ -74,7 +74,7 @@ export const Explore = () =>  (
 
     {/* Companies */}
     <div className="w-full">
-      <div className="flex justify-between items-center">
+      <div className="flex px-4 justify-between items-center">
         <h3 className="font-semibold text-primary text-2xl">Construction Companies</h3>
       <Button
       title="Explore More"
@@ -86,7 +86,7 @@ export const Explore = () =>  (
       </div>
       {/* Card Container */}
       <div className="container mx-auto px-4 py-8">
-         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 items-stretch">
+         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 items-center">
            {data.companies.map((company) => (
             <Card
               key={company.id}
