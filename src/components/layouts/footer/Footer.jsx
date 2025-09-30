@@ -32,11 +32,15 @@ export const Footer = () => {
             />
             <button
               type="submit"
-              className="bg-primary text-white rounded-r-lg px-4 py-2 hover:bg-primary-dark transition-colors"
+              className="bg-primary text-white rounded-lg px-4 py-2 hover:bg-primary-dark transition-colors"
             >
               Subscribe
             </button>
           </form>
+          <span className="text-sm text-gray-600 mt-2 block">
+            By subscribing you agree to with our Privacy Policy and
+            provide consent to receive updates from our company.
+          </span>
         </div>
         <div className="flex flex-col gap-2">
           <h3 className="text-lg font-semibold mb-2">Pages</h3>
@@ -74,6 +78,34 @@ export const Footer = () => {
         <div>
           <h3 className="text-lg font-semibold mb-2">Download</h3>
         </div>
+      </div>
+      <div className="mt-8 pt-4 container mx-auto">
+        <p className="text-sm">
+          &copy; {new Date().getFullYear()} Synckreo. All rights
+          reserved.
+          <ul className="float-end flex space-x-4">
+            <li>
+              <a href="#" className="hover:underline">
+                Privacy Policy
+              </a>
+            </li>
+            <li>
+              <a href="#" className="hover:underline">
+                Terms of Service
+              </a>
+            </li>
+            <li>
+              <a href="#" className="hover:underline">
+                Disclaimer
+              </a>
+            </li>
+            <li>
+              <a href="#" className="hover:underline">
+                Copyright Policy
+              </a>
+            </li>
+          </ul>
+        </p>
       </div>
     </footer>
   );
