@@ -1,5 +1,6 @@
 import React from 'react';
 import FooterBG from '../../../assets/images/footer_background_Image.png';
+import FooterLG from '../../../assets/images/Footer_logo.png';
 
 export const Footer = () => {
   const footerBgStyles = {
@@ -15,11 +16,7 @@ export const Footer = () => {
     <footer style={footerBgStyles} className="w-full h-48">
       <div className="container grid grid-cols-3 mx-auto py-8 flex flex-col items-start gap-10">
         <div>
-          <img
-            src="/_main_logo_/logo_synckreo_colored.svg"
-            alt="Synckreo Logo"
-            className="w-541px h-80px"
-          />
+          <img src={FooterLG} alt="Synckreo Logo" />
           <p className="text-sm text-gray-600 mt-4">
             Join our newsletter to stay up to date on features and
             releases.
@@ -42,7 +39,7 @@ export const Footer = () => {
             provide consent to receive updates from our company.
           </span>
         </div>
-        <div className="flex flex-col gap-2">
+        <div className="flex flex-col gap-2 ml-10">
           <h3 className="text-lg font-semibold mb-2">Pages</h3>
           <a
             href="#"
@@ -75,7 +72,7 @@ export const Footer = () => {
             FAQs
           </a>
         </div>
-        <div className="align-items-center flex flex-col gap-2">
+        <div className="align-items-center flex flex-col gap-2 mt-10">
           <h3 className="text-center text-lg font-semibold mb-2">
             Download
           </h3>
@@ -95,7 +92,7 @@ export const Footer = () => {
           </div>
         </div>
       </div>
-      <div className="mt-13 pt-4 container mx-auto">
+      <div className="mt-8 pt-4 container mx-auto">
         <p className="text-sm">
           &copy; {new Date().getFullYear()} Synckreo. All rights
           reserved.
