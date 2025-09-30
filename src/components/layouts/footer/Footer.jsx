@@ -25,7 +25,7 @@ export const Footer = () => {
             <input
               type="email"
               placeholder="Enter your email"
-              className="flex-grow text-gray-700 border border-gray-300 rounded-l-lg px-4 py-2 outline-none"
+              className="flex-grow text-gray-700 border border-gray-300 rounded-lg px-4 py-2 outline-none"
             />
             <button
               type="submit"
