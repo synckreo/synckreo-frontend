@@ -10,6 +10,7 @@ export const Footer = () => {
     textAlign: 'start',
     minHeight: '400px',
   };
+
   return (
     <footer style={footerBgStyles} className="w-full h-48">
       <div className="container grid grid-cols-3 mx-auto py-8 flex flex-col items-start gap-10">
@@ -19,8 +20,7 @@ export const Footer = () => {
             alt="Synckreo Logo"
             className="w-541px h-80px"
           />
-          <br />
-          <p className="text-sm text-gray-600">
+          <p className="text-sm text-gray-600 mt-4">
             Join our newsletter to stay up to date on features and
             releases.
           </p>
@@ -37,7 +37,7 @@ export const Footer = () => {
               Subscribe
             </button>
           </form>
-          <span className="text-sm text-gray-600 mt-2 block">
+          <span className="text-sm text-gray-600 mt-4 block">
             By subscribing you agree to with our Privacy Policy and
             provide consent to receive updates from our company.
           </span>
@@ -75,27 +75,52 @@ export const Footer = () => {
             FAQs
           </a>
         </div>
-        <div>
-          <h3 className="text-lg font-semibold mb-2">Download</h3>
+        <div className="align-items-center flex flex-col gap-2">
+          <h3 className="text-center text-lg font-semibold mb-2">
+            Download
+          </h3>
+          <div className="mb-4 align-items-center flex gap-4 flex-row">
+            <button className="bg-gray-800 text-white px-4 py-2 rounded-lg hover:bg-gray-700 transition-colors mb-2">
+              <i className="fab fa-apple mr-2 text-sm">
+                Download on the
+              </i>
+              App Store
+            </button>
+            <button className="bg-gray-800 text-white px-4 py-2 rounded-lg hover:bg-gray-700 transition-colors">
+              <i className="fab fa-google-play mr-2 text-sm">
+                Get it on
+              </i>
+              Google Play
+            </button>
+          </div>
         </div>
       </div>
-      <div className="mt-8 pt-4 container mx-auto">
+      <div className="mt-13 pt-4 container mx-auto">
         <p className="text-sm">
           &copy; {new Date().getFullYear()} Synckreo. All rights
           reserved.
           <ul className="float-end flex space-x-4">
             <li>
-              <a href="#" className="hover:underline">
+              <a
+                href="#"
+                className="hover:underline after:content-['|'] after:mx-2"
+              >
                 Privacy Policy
               </a>
             </li>
             <li>
-              <a href="#" className="hover:underline">
+              <a
+                href="#"
+                className="hover:underline after:content-['|'] after:mx-2"
+              >
                 Terms of Service
               </a>
             </li>
             <li>
-              <a href="#" className="hover:underline">
+              <a
+                href="#"
+                className="hover:underline after:content-['|'] after:mx-2"
+              >
                 Disclaimer
               </a>
             </li>
