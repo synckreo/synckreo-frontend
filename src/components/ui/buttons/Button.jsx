@@ -20,7 +20,8 @@ export const Button = ({
     contact:
       'max-w-max flex-shrink-0 border border-[#F57C0080] text-primary bg-[#F5F5F5] font-bold text-lg hover:bg-[#F57C0080]/10',
     explore:
-      'flex items-center gap-2 border border-[1px] rounded-[8px] border-[#F57C0080] text-primary font-bold text-lg cursor-pointer transition-colors hover:bg-[#F57C0080]/10'
+      'flex items-center gap-2 border border-[1px] rounded-[8px] border-[#F57C0080] text-primary font-bold text-lg cursor-pointer transition-colors hover:bg-[#F57C0080]/10',
+    iconOnly: 'p-2 border border-gray-200',
   };
 
   const sizes = {
@@ -29,17 +30,25 @@ export const Button = ({
     contact: 'px-4 pt-[11px] pb-[11px]',
   };
 
+  const isIconOnly = variant === 'iconOnly';
+
   return (
     <button
-      className={`${base} ${sizes[size]} ${variants[variant]} ${styles || ''}`}
+      className={`${base} ${isIconOnly ? variants.iconOnly : sizes[size]} ${variants[variant]} ${styles || ''}`}
       onClick={onClick}
     >
-       {iconPosition === 'left' && icon && (
-        <span className="flex-shrink-0">{icon}</span>
-      )}
-      <span className="flex-shrink-0">{title}</span>
-      {iconPosition === 'right' && icon && (
-        <span className="flex-shrink-0">{icon}</span>
+      {isIconOnly ? (
+        icon
+      ) : (
+        <>
+          {iconPosition === 'left' && icon && (
+            <span className="flex-shrink-0">{icon}</span>
+          )}
+          <span className="flex-shrink-0">{title}</span>
+          {iconPosition === 'right' && icon && (
+            <span className="flex-shrink-0">{icon}</span>
+          )}
+        </>
       )}
     </button>
   );
