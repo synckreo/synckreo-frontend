@@ -18,9 +18,13 @@ export const ProfileCard = ({
   location,
   skills = [],
   maxVisibleSkills = 6,
+  applications,
+  jobDesc,
+  jobPostTitle,
   onSaveClick,
   onViewProfileClick,
   onGetInTouchClick,
+  onApplyNow,
   children,
 }) => {
   const visibleSkills = skills.slice(0, maxVisibleSkills);
@@ -30,7 +34,7 @@ export const ProfileCard = ({
   );
 
   return (
-    <div className="m-3 h-full w-full rounded-[16.47px] bg-gray-100 p-3">
+    <div className="m-6 h-full w-full rounded-[16.47px] bg-gray-100 p-3 shadow-md transition-shadow duration-300 hover:shadow-xl">
       <div className="flex justify-between">
         <div className="flex items-center gap-2">
           <img className="h-14 w-14" src={avatar} alt={companyName} />
@@ -76,29 +80,56 @@ export const ProfileCard = ({
             </div>
           </div>
         </div>
+
         <div className="flex items-center gap-2">
           <Button
             icon={<img src={savedIcon} alt="Saved" />}
             variant="iconOnly"
             onClick={onSaveClick}
           />
-          <Button
-            variant="outline"
-            size="normal"
-            title="View Profile"
-            onClick={onViewProfileClick}
-          />
-          <Button
-            variant="solid"
-            size="normal"
-            title="Get In Touch"
-            onClick={onGetInTouchClick}
-          />
+          {jobDesc ? (
+            <Button
+              variant="solid"
+              size="normal"
+              title="Apply Now"
+              onClick={onApplyNow}
+            />
+          ) : (
+            <>
+              <Button
+                variant="outline"
+                size="normal"
+                title="View Profile"
+                onClick={onViewProfileClick}
+              />
+              <Button
+                variant="solid"
+                size="normal"
+                title="Get In Touch"
+                onClick={onGetInTouchClick}
+              />
+            </>
+          )}
         </div>
       </div>
 
+      {jobPostTitle && (
+        <div className="mt-6">
+          <h3 className="text-primary text-2xl font-semibold">
+            {jobPostTitle}
+          </h3>
+        </div>
+      )}
+
+      {jobDesc && (
+        <div className="mt-6">
+          <h3 className="text-base font-semibold">About the Job:</h3>
+          <p className="text-gray-700">{jobDesc}</p>
+        </div>
+      )}
+
       {children && (
-        <div className="mt-6 flex gap-4 overflow-x-auto pb-4">
+        <div className="mt-6 flex gap-4 overflow-x-auto pb-3">
           {children}
         </div>
       )}
@@ -115,10 +146,39 @@ export const ProfileCard = ({
           ))}
 
           {remainingSkillsCount > 0 && (
-            <span className="text-primary">
-              + {remainingSkillsCount} other skills
-            </span>
+            <div className="group relative inline-block">
+              <span className="text-primary cursor-pointer underline">
+                + {remainingSkillsCount} other skills
+              </span>
+
+              {/* Tooltip */}
+              <div className="absolute bottom-full left-0 z-10 mb-2 hidden w-max max-w-md group-hover:block">
+                <div className="rounded-lg bg-gray-300 p-3 shadow-lg">
+                  <div className="flex flex-wrap gap-2">
+                    {skills
+                      .slice(maxVisibleSkills)
+                      .map((skill, index) => (
+                        <span
+                          key={index}
+                          className="rounded-3xl bg-gray-200 px-3 py-2 text-sm font-medium"
+                        >
+                          {skill}
+                        </span>
+                      ))}
+                  </div>
+                  {/* Arrow pointing down */}
+                  <div className="absolute top-full left-4 h-0 w-0 border-t-4 border-r-4 border-l-4 border-t-gray-300 border-r-transparent border-l-transparent"></div>
+                </div>
+              </div>
+            </div>
           )}
+        </div>
+      )}
+
+      {applications && (
+        <div className="mt-6 flex gap-2">
+          <span className="text-gray-800/70">Applications:</span>
+          <p className="font-medium text-gray-700">{applications}+</p>
         </div>
       )}
     </div>
