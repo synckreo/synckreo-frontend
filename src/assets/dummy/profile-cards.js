@@ -1,6 +1,7 @@
 import urbanCraftBuilders from '../images/avatar/urban-craft-builders.png';
 import prostructDevelopments from '../images/avatar/prostruct-developments.png';
 import apexFoundationBuilders from '../images/avatar/apex-foundation-builders.png';
+import solidBeamsConstructions from '../images/avatar/solid-beams-constructions.png';
 import customDuplexConstruction from '../images/project-card-images/custom-duplex-construction.webp';
 import highRiseTower from '../images/project-card-images/high-rise-tower.webp';
 import industrialWarehouseConstruction from '../images/project-card-images/industrial-warehouse-construction.webp';
@@ -78,6 +79,35 @@ export const companyData = {
       id: 3,
       companyName: 'Apex Foundation Builders',
       avatar: apexFoundationBuilders,
+      category: 'Company',
+      hourlyRate: 250,
+      location: 'Los Angeles, California',
+      averageReplyTime: 3,
+      rating: 4.8,
+      reviews: 48,
+      skills: [
+        'House and Building Design',
+        '3D Building Models',
+        'Drawing Floor Plans',
+        'Green and Eco-friendly Design',
+        'Planning Room Layouts',
+        'Managing Projects',
+        'Structural Engineering',
+        'Interior Design Services',
+        'Landscape Architecture',
+        'Building Code Compliance',
+        'Energy Efficient Systems',
+        'Smart Home Integration',
+        'Renovation & Remodeling',
+        'Commercial Construction',
+        'Cost Estimation',
+        'Quality Control Management',
+      ],
+    },
+    {
+      id: 4,
+      companyName: 'Solid Beam Constructions',
+      avatar: solidBeamsConstructions,
       category: 'Company',
       hourlyRate: 250,
       location: 'Los Angeles, California',
@@ -201,6 +231,49 @@ export const companyData = {
       image: townhouseDevelopmentProject,
       likes: 250,
       views: 432,
+    },
+  ],
+
+  jobPosts: [
+    {
+      id: 1,
+      companyId: 1,
+      jobPostTitle: 'Residential Home Renovation Contractor Needed',
+      jobDesc:
+        'We are seeking an experienced contractor to lead a full renovation of a two-story residential home in Dallas, Texas. The project includes remodeling the kitchen and bathrooms, updating flooring, installing new windows, and repainting interior walls.',
+      applications: 25,
+    },
+    {
+      id: 2,
+      companyId: 1,
+      jobPostTitle: 'Warehouse Conversion to Creative Studio',
+      jobDesc:
+        'Seeking a professional team to transform a 5,000 sq. ft. industrial warehouse into a fully functional creative workspace. Scope includes structural reinforcement, acoustic treatments, and open-plan design with breakout areas.',
+      applications: 25,
+    },
+    {
+      id: 3,
+      companyId: 2,
+      jobPostTitle: 'Suburban Duplex New Build',
+      jobDesc:
+        'Looking for a licensed builder to manage the ground-up construction of a two-unit duplex in a residential area of Denver, CO. Must have experience with permitting, utility connections, and turnkey delivery.',
+      applications: 25,
+    },
+    {
+      id: 4,
+      companyId: 4,
+      jobPostTitle: 'Modern Bungalow Revamp',
+      jobDesc:
+        'We’re renovating a single-story bungalow to include an open-plan living area, updated kitchen, new roofing, and sustainable insulation. The project emphasizes energy efficiency and modern, minimal design.',
+      applications: 25,
+    },
+    {
+      id: 5,
+      companyId: 3,
+      jobPostTitle: 'Retail Space Interior Fit-Out',
+      jobDesc:
+        'A commercial client needs a full interior buildout of a 2,000 sq. ft. retail space in a shopping district. Includes drywall, custom shelving, lighting, flooring, and storefront installation.',
+      applications: 25,
     },
   ],
 };
