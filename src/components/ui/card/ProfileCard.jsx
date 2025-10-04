@@ -103,7 +103,7 @@ export const ProfileCard = ({
         </div>
       )}
 
-      {skills.lenght > 0 && (
+      {skills.length > 0 && (
         <div className="mt-6 flex items-center gap-2">
           {visibleSkills.map((skill, index) => (
             <span
