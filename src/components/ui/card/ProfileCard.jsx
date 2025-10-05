@@ -153,7 +153,7 @@ export const ProfileCard = ({
 
               {/* Tooltip */}
               <div className="absolute bottom-full left-0 z-10 mb-2 hidden w-max max-w-md group-hover:block">
-                <div className="rounded-lg bg-gray-300 p-3 shadow-lg">
+                <div className="rounded-lg bg-gray-50 p-3 shadow-lg">
                   <div className="flex flex-wrap gap-2">
                     {skills
                       .slice(maxVisibleSkills)
@@ -167,7 +167,7 @@ export const ProfileCard = ({
                       ))}
                   </div>
                   {/* Arrow pointing down */}
-                  <div className="absolute top-full left-4 h-0 w-0 border-t-4 border-r-4 border-l-4 border-t-gray-300 border-r-transparent border-l-transparent"></div>
+                  <div className="absolute top-full left-4 h-0 w-0 border-t-4 border-r-4 border-l-4 border-t-gray-50 border-r-transparent border-l-transparent"></div>
                 </div>
               </div>
             </div>
