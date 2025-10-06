@@ -69,6 +69,7 @@ export const HomeOwnerProfile = () => {
                 {homeownerdata.homeOwners.map((owner) => (
                     <HomeOwnerCard
                         key={owner.id}
+                        image={owner.image}
                         name={owner.name}
                         headline={owner.headline}
                         about={owner.about}
@@ -81,7 +82,7 @@ export const HomeOwnerProfile = () => {
                 <Button
                   title={'Load More'}
                   variant="outline"
-                  className="mt-4"
+                  className="my-4"
                 />
               </div>
             </div>
