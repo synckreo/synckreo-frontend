@@ -1,8 +1,11 @@
+import OwnerProfile  from "../images/avatar/sarahSmith.png";
+
 export const homeownerdata = {
 homeOwners: [
     {
       id: 1,
       name: 'Sarah Smith',
+      image: OwnerProfile,
       headline: 'Residential Home Renovation Contractor Needed',
       about: 'About the Job:',
       description:
@@ -11,6 +14,7 @@ homeOwners: [
     {
       id: 2,
       name: 'Sarah Smith',
+      image: OwnerProfile,
       headline: 'Warehouse Conversion to Creative Studio',
       about: 'About the Job:',
       description: 'Seeking a professional team to transform a 5,000 sq. ft. industrial warehouse into a fully functional creative workspace. Scope includes structural reinforcement, acoustic treatments, and open-plan design with breakout areas.',
@@ -18,6 +22,7 @@ homeOwners: [
     {
       id: 3,
       name: 'Sarah Smith',
+      image: OwnerProfile,
       headline: 'Suburban Duplex New Build',
       about: 'About the Job:',
       description: 'Looking for a licensed builder to manage the ground-up construction of a two-unit duplex in a residential area of Denver, CO. Must have experience with permitting, utility connections, and turnkey delivery.',

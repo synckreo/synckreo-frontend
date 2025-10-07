@@ -2,17 +2,16 @@ import { Button } from "../buttons/Button";
 import savedIcon from '../../../assets/icons/saved.svg';
 
 export const HomeOwnerCard = ({
+    image,
     name,
     headline,
     about,
     description,
-    avatar,
-
 }) => {
   return (
     <div className="bg-gray-100 p-4 w-full rounded-lg">
       <div className="flex justify-between mb-2">
-        <img src={avatar} className="rounded-lg" />
+        <img src={image} alt={"Avatar"} className="w-10 h-10 rounded-full mx-2" />
         <div className="mt-2">
             <span className="font-semibold float-start flex">{name}</span>
         </div>

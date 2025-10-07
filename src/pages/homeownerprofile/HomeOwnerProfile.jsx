@@ -20,7 +20,7 @@ export const HomeOwnerProfile = () => {
             src={avatar}
             alt="Avatar"
           />
-          <h6 className="font-bold">Sarah Smith</h6>
+          <span className="font-bold text-2xl">Sarah Smith</span>
           <a href="#" className="text-blue-500">
             Location
           </a>
@@ -69,11 +69,11 @@ export const HomeOwnerProfile = () => {
                 {homeownerdata.homeOwners.map((owner) => (
                     <HomeOwnerCard
                         key={owner.id}
+                        image={owner.image}
                         name={owner.name}
                         headline={owner.headline}
                         about={owner.about}
-                        description={owner.description}
-                        avatar={owner.avatar}  
+                        description={owner.description} 
                     />
                 ))}
               </div>
