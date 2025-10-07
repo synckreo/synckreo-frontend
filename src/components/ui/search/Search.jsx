@@ -36,7 +36,7 @@ export const Search = ({
           {showDropdown && (
             <div className="relative flex items-center">
               <select
-                className="cursor-pointer appearance-none bg-transparent pr-8 font-medium text-gray-800 outline-none"
+                className="cursor-pointer appearance-none bg-transparent pr-4 font-medium text-gray-800 outline-none"
                 value={value}
                 onChange={(e) => onChange(e.target.value)}
               >
