@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 import { homeownerdata } from '../../assets/dummy/homeownerprofiledata';
 import { HomeOwnerCard } from '../../components/ui/card/HomeOwnerCard';
 import { Button } from '../../components/ui/buttons/Button';
-import avatar from '../../assets/images/home_image_hero.png';
+import avatar from '../../assets/images/avatar/sarahSmith.png';
 
 export const HomeOwnerProfile = () => {
 
@@ -12,7 +12,7 @@ export const HomeOwnerProfile = () => {
   };
   return (
     <>
-      <section className="min-h-screen flex items-center justify-center">
+      <section className="mt-24 flex items-center justify-center">
         <div className="flex flex-col items-center space-y-2">
           {/* Temporary Avatar */}
           <img
@@ -20,7 +20,7 @@ export const HomeOwnerProfile = () => {
             src={avatar}
             alt="Avatar"
           />
-          <h6 className="font-bold">"Home Owner Name"</h6>
+          <h6 className="font-bold">Sarah Smith</h6>
           <a href="#" className="text-blue-500">
             Location
           </a>
@@ -69,7 +69,6 @@ export const HomeOwnerProfile = () => {
                 {homeownerdata.homeOwners.map((owner) => (
                     <HomeOwnerCard
                         key={owner.id}
-                        image={owner.image}
                         name={owner.name}
                         headline={owner.headline}
                         about={owner.about}
