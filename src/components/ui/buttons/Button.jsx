@@ -25,7 +25,7 @@ export const Button = ({
   };
 
   const sizes = {
-    normal: 'px-4 py-2',
+    normal: 'md:px-4 px-2  py-1 md:py-2',
     large: 'px-6 py-3',
     contact: 'px-4 pt-[11px] pb-[11px]',
   };
@@ -34,7 +34,7 @@ export const Button = ({
 
   return (
     <button
-      className={`${base} ${isIconOnly ? variants.iconOnly : sizes[size]} ${variants[variant]} ${styles || ''}`}
+      className={`${base} ${isIconOnly && variants.iconOnly} ${sizes[size]} ${variants[variant]} ${styles || ''}`}
       onClick={onClick}
     >
       {isIconOnly ? (
