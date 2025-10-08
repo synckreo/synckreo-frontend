@@ -57,5 +57,19 @@ export const filters = {
     'Planning Room Layouts',
     'Managing Projects',
   ]
-
 };
+
+export const profiles = {
+  profile: [{
+    id: 1,
+    name: 'Sarah Smith',
+    location: 'Los Angeles, California',
+    category: 'Architech',
+    rating: 4.8,
+    reviews: 48,
+    followers: 10345,
+    following: 1447,
+    likes: 3204 ,
+  }
+  ]
+}

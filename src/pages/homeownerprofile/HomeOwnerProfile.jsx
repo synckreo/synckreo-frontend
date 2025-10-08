@@ -1,11 +1,13 @@
 import React, {useState} from 'react';
-import { homeownerdata } from '../../assets/dummy/homeownerprofiledata';
+import { homeownerdata, profiles } from '../../assets/dummy/homeownerprofiledata';
 import { HomeOwnerCard } from '../../components/ui/card/HomeOwnerCard';
 import { Button } from '../../components/ui/buttons/Button';
+import locationIcon from '../../assets/icons/location.svg';
+import starIcon from '../../assets/icons/star.svg';
 import avatar from '../../assets/images/avatar/sarahSmith.png';
 
 export const HomeOwnerProfile = () => {
-
+  
     const [selectedTab, setSelectedTab] = useState('Open Projects');
     const tabHandler = (e) => {
     setSelectedTab(e.target.innerText);
@@ -21,11 +23,37 @@ export const HomeOwnerProfile = () => {
             src={avatar}
             alt="Avatar"
           />
-          <span className="font-bold text-2xl">Sarah Smith</span>
-          <a href="#" className="text-blue-500">
-            Location
-          </a>
-          <ul className="my-4 flex space-x-4 text-gray-600">
+          {profiles.profile.map((prof)=>(
+            <div className='grid text-center gap-2'>
+            <span className='text-3xl font-semibold font-General Sans' key={prof}>
+              {prof.name}
+              <span className='text-sm ml-2 text-primary rounded-[6px] bg-[#F57C001A] px-2 py-1.5 text-xs font-medium whitespace-nowrap sm:px-3'>
+                {prof.category}</span>
+            </span>
+            <div className="flex items-center text-sm gap-2 whitespace-nowrap">
+              <img
+                src={locationIcon}
+                     alt="Location"
+                    className="h-3 w-3 sm:h-4 sm:w-4"
+                 />
+              <span>
+                <a href='#'>
+                {prof.location}
+                </a>
+              </span>
+              <img
+                src={starIcon}
+                     alt="star"
+                    className="h-3 w-3 sm:h-4 sm:w-4"
+                 />
+                <span>
+                  {prof.rating}
+                </span>
+                <span className="text-gray-500">({prof.reviews})</span>
+              </div>
+            </div>
+          ))}
+          <ul className="my-2 flex space-x-4 text-gray-600 mb-5">
             <li>
               <a href="#">Followers</a>
             </li>
@@ -47,7 +75,7 @@ export const HomeOwnerProfile = () => {
               <li>
                 <a
                   href="#"
-                  className="inline-block p-4 py-1 px-2 hover:text-orange-500 border-b border-transparent hover:border-orange-500"
+                  className="inline-block p-4 py-1 px-2 hover:text-orange-500 border-b border-transparent hover:border-orange-500 focus:text-orange-500"
                   onClick={tabHandler}
                 >
                   Open Projects
@@ -56,7 +84,7 @@ export const HomeOwnerProfile = () => {
               <li>
                 <a
                   href="#"
-                  className="inline-block p-4 py-1 px-2 hover:text-orange-500 border-b border-transparent hover:border-orange-500"
+                  className="inline-block p-4 py-1 px-2 hover:text-orange-500 border-b border-transparent hover:border-orange-500 focus:text-orange-500"
                   onClick={tabHandler}
                 >
                   About
