@@ -51,16 +51,19 @@ export const HomeOwnerProfile = () => {
                 </span>
                 <span className="text-gray-500">({prof.reviews})</span>
               </div>
-            <div className='text-gray-600'>
+            <div>
             <ul className="flex my-2 space-x-4 mb-5 items-center justify-center">
                 <li>
-                  <a href="#"><span className='tex-dark-500'>{prof.followers}</span> Followers</a>
+                  <span>{prof.followers}</span> 
+                  <a href="#" className='text-gray-600'> Followers</a>
                 </li>
                 <li>
-                  <a href="#"><span className='tex-dark-500'>{prof.following}</span> Following</a>
+                  <span>{prof.following}</span>
+                  <a href="#" className='text-gray-600'> Following</a>
                 </li>
                 <li>
-                  <a href="#"><span className='tex-dark-500'>{prof.likes}</span> Likes</a>
+                  <span>{prof.likes}</span>
+                  <a href="#" className='text-gray-600'> Likes</a>
                 </li>
             </ul>
             </div>
