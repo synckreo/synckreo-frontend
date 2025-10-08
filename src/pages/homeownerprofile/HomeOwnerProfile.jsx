@@ -24,13 +24,13 @@ export const HomeOwnerProfile = () => {
             alt="Avatar"
           />
           {profiles.profile.map((prof)=>(
-            <div className='grid text-center gap-2'>
+            <div className='grid text-center gap-2 justify-center'>
             <span className='text-3xl font-semibold font-General Sans' key={prof}>
               {prof.name}
               <span className='text-sm ml-2 text-primary rounded-[6px] bg-[#F57C001A] px-2 py-1.5 text-xs font-medium whitespace-nowrap sm:px-3'>
                 {prof.category}</span>
             </span>
-            <div className="flex items-center text-sm gap-2 whitespace-nowrap">
+            <div className="flex items-center text-sm gap-2 whitespace-nowrap justify-center">
               <img
                 src={locationIcon}
                      alt="Location"
@@ -51,19 +51,22 @@ export const HomeOwnerProfile = () => {
                 </span>
                 <span className="text-gray-500">({prof.reviews})</span>
               </div>
+            <div className='text-gray-600'>
+            <ul className="flex my-2 space-x-4 mb-5 items-center justify-center">
+                <li>
+                  <a href="#"><span className='tex-dark-500'>{prof.followers}</span> Followers</a>
+                </li>
+                <li>
+                  <a href="#"><span className='tex-dark-500'>{prof.following}</span> Following</a>
+                </li>
+                <li>
+                  <a href="#"><span className='tex-dark-500'>{prof.likes}</span> Likes</a>
+                </li>
+            </ul>
+            </div>
             </div>
           ))}
-          <ul className="my-2 flex space-x-4 text-gray-600 mb-5">
-            <li>
-              <a href="#">Followers</a>
-            </li>
-            <li>
-              <a href="#">Following</a>
-            </li>
-            <li>
-              <a href="#">Likes</a>
-            </li>
-          </ul>
+          
           <Button
             variant="outline"
             className="mt-6"
