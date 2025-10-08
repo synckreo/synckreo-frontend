@@ -9,6 +9,7 @@ export const HomeOwnerProfile = () => {
     const [selectedTab, setSelectedTab] = useState('Open Projects');
     const tabHandler = (e) => {
     setSelectedTab(e.target.innerText);
+
   };
   return (
     <>
@@ -71,8 +72,14 @@ export const HomeOwnerProfile = () => {
                         key={owner.id}
                         image={owner.image}
                         name={owner.name}
+                        category={owner.category}
                         headline={owner.headline}
+                        hourlyRate={owner.hourlyRate}
+                        location={owner.location}
+                        averageReplyTime={owner.averageReplyTime}
                         about={owner.about}
+                        rating={owner.rating}
+                        reviews={owner.reviews}
                         description={owner.description} 
                     />
                 ))}
