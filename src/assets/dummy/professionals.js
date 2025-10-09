@@ -92,6 +92,14 @@ const professionalProfile = {
     following: 1447,
     likes: 3204,
   },
+  skills: [
+    'House and Building Design',
+    '3D Building Models',
+    'Drawing Floor Plans',
+    'Green and Eco-friendly Design',
+    'Planning Room Layouts',
+    'Managing Projects',
+  ],
   works: professionalWorks,
 };
 
