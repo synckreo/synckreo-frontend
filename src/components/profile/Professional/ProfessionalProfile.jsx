@@ -2,6 +2,7 @@ import { React, useState } from 'react';
 import { ProfileHeader } from '../shared/ProfileHeader';
 import { ProjectGallery } from './ProjectGallery';
 import { Tab } from '../shared/Tab';
+import { About } from '../shared/About';
 import {
   professionalProfile,
   professionalWorks,
@@ -58,7 +59,9 @@ export const ProfessionalProfile = () => {
 
       <div className="mt-6 flex justify-center">
         {activeTab === 'first' && config.content}
-        {activeTab === 'second' && <div>About information</div>}
+        {activeTab === 'second' && (
+          <About skills={professionalProfile.skills} />
+        )}
       </div>
     </div>
   );
