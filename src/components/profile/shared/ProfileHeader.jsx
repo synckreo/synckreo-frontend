@@ -21,15 +21,15 @@ export const ProfileHeader = ({
 
   return (
     <div className="flex flex-col items-center gap-4">
-      <div className="mb-4">
+      <div className="mb-2">
         <img
-          className="h-[150px] w-[150px] rounded-[100px]"
+          className="h-24 w-24 rounded-full object-cover object-center sm:h-32 sm:w-32 md:h-36 md:w-36 lg:h-40 lg:w-40"
           src={avatar}
           alt="Avatar"
         />
       </div>
       <div className="flex items-center gap-2">
-        <h3 className="text-5xl font-semibold">{name}</h3>
+        <h3 className="text-2xl font-semibold lg:text-5xl">{name}</h3>
         <span className="text-primary rounded-[6px] bg-[#F57C001A] px-3 py-2 text-xs font-medium">
           {badge}
         </span>

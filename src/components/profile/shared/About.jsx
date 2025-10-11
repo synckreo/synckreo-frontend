@@ -7,17 +7,17 @@ import linkedinIcon from '../../../assets/icons/linkedin-logo.svg';
 export const About = ({ skills }) => {
   return (
     <div className="container mb-6 flex flex-col flex-wrap justify-center gap-4">
-      <div className="flex flex-col gap-2">
+      <div className="flex flex-col items-center gap-2 lg:items-start">
         <h3 className="font-bold">About Me:</h3>
         <span className="gray-900 italic">
           Add something about you.
         </span>
       </div>
 
-      <div className="flex gap-4">
-        <div className="flex flex-col gap-2">
+      <div className="flex flex-col items-center justify-center gap-4 lg:flex-row">
+        <div className="flex flex-col items-center gap-2 lg:items-start">
           <h3 className="font-bold">Skills:</h3>
-          <div className="flex flex-wrap items-center gap-2">
+          <div className="flex flex-wrap items-center justify-center gap-2 lg:justify-start">
             {skills.map((skill, index) => {
               return (
                 <span
