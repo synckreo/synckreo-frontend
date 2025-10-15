@@ -1,5 +1,7 @@
 import { React } from 'react';
 
+import { Badge } from '../../ui/badge/Badge';
+
 import fbIcon from '../../../assets/icons/fb-logo.svg';
 import gmailIcon from '../../../assets/icons/gmail-logo.svg';
 import linkedinIcon from '../../../assets/icons/linkedin-logo.svg';
@@ -20,12 +22,7 @@ export const About = ({ skills }) => {
           <div className="flex flex-wrap items-center justify-center gap-2 lg:justify-start">
             {skills.map((skill, index) => {
               return (
-                <span
-                  key={index}
-                  className="rounded-3xl bg-gray-200 px-2 py-1.5 text-xs font-medium whitespace-nowrap sm:px-4 sm:py-2.5 sm:text-sm"
-                >
-                  {skill}
-                </span>
+                <Badge key={index} variant="category" title={skill} />
               );
             })}
             <span className="text-primary cursor-pointer text-xs underline sm:text-sm">

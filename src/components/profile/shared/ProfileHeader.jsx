@@ -1,5 +1,6 @@
 import React from 'react';
 
+import { Badge } from '../../ui/badge/Badge';
 import { Button } from '../../../components/ui/buttons/Button';
 
 import locationIcon from '../../../assets/icons/location.svg';
@@ -30,9 +31,7 @@ export const ProfileHeader = ({
       </div>
       <div className="flex items-center gap-2">
         <h3 className="text-2xl font-semibold lg:text-5xl">{name}</h3>
-        <span className="text-primary rounded-[6px] bg-[#F57C001A] px-3 py-2 text-xs font-medium">
-          {badge}
-        </span>
+        <Badge title={badge} variant="role" />
       </div>
       <div className="flex gap-2">
         <div className="flex items-center gap-2">

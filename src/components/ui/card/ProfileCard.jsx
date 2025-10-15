@@ -1,5 +1,6 @@
 import React from 'react';
 
+import { Badge } from '../badge/Badge';
 import { Button } from '../buttons/button';
 import dollarIcon from '../../../assets/icons/dollar.svg';
 import locationIcon from '../../../assets/icons/location.svg';
@@ -47,9 +48,7 @@ export const ProfileCard = ({
               <h3 className="text-sm leading-[100%] font-semibold sm:text-lg">
                 {companyName}
               </h3>
-              <span className="text-primary rounded-[6px] bg-[#F57C001A] px-2 py-1.5 text-xs font-medium whitespace-nowrap sm:px-3">
-                {category}
-              </span>
+              <Badge title={category} variant="role" />
             </div>
             <div className="flex flex-wrap items-center gap-2 text-xs sm:gap-3 sm:text-sm md:gap-4">
               <div className="flex items-center gap-1 whitespace-nowrap">

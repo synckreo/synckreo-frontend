@@ -3,6 +3,7 @@ import { Search } from '../ui/search/Search';
 import { ProfileCard } from '../ui/card/ProfileCard';
 import { ProjectCard } from '../ui/card/ProjectCard';
 import { Card } from '../ui/card/Card';
+import { Badge } from '../ui/badge/Badge';
 
 import { filters } from '../../assets/dummy/filter';
 import { companyData } from '../../assets/dummy/company-profile-cards';
@@ -134,12 +135,7 @@ export const UserContent = () => {
           <span>Filters:</span>
           <div className="flex flex-wrap justify-center gap-2">
             {filters.tags.map((tag) => (
-              <span
-                className="active:text-primary hover:text-primary hover:border-primary active:border-primary cursor-pointer rounded-[20px] border border-gray-800/10 px-4 py-2 text-sm font-medium text-gray-800/70"
-                key={tag}
-              >
-                {tag}
-              </span>
+              <Badge variant="filter" key={tag} title={tag} />
             ))}
           </div>
         </div>
