@@ -1,9 +1,13 @@
 import React, {useState} from 'react';
-import { homeownerdata, profiles } from '../../assets/dummy/homeownerprofiledata';
+import { homeownerdata, profiles, aboutData } from '../../assets/dummy/homeownerprofiledata';
 import { HomeOwnerCard } from '../../components/ui/card/HomeOwnerCard';
+import { filters } from '../../assets/dummy/homeownerprofiledata';
 import { Button } from '../../components/ui/buttons/Button';
 import locationIcon from '../../assets/icons/location.svg';
 import starIcon from '../../assets/icons/star.svg';
+import FacebookIcon from '../../assets/icons/fb-logo.svg';
+import LinkedInIcon from '../../assets/icons/linkedin-logo.svg';
+import GmailIcon from '../../assets/icons/gmail-logo.svg'
 import avatar from '../../assets/images/avatar/sarahSmith.png';
 
 export const HomeOwnerProfile = () => {
@@ -81,7 +85,7 @@ export const HomeOwnerProfile = () => {
               <li>
                 <a
                   href="#"
-                  className="inline-block p-4 py-1 px-2 hover:text-orange-500 border-b border-transparent hover:border-orange-500 focus:text-orange-500"
+                  className="inline-block p-4 py-1 px-2 hover:text-orange-500 border-b border-transparent hover:border-orange-500 focus:text-orange-500 focus:underline"
                   onClick={tabHandler}
                 >
                   Open Projects
@@ -90,7 +94,7 @@ export const HomeOwnerProfile = () => {
               <li>
                 <a
                   href="#"
-                  className="inline-block p-4 py-1 px-2 hover:text-orange-500 border-b border-transparent hover:border-orange-500 focus:text-orange-500"
+                  className="inline-block p-4 py-1 px-2 hover:text-orange-500 border-b border-transparent hover:border-orange-500 focus:text-orange-500 focus:underline"
                   onClick={tabHandler}
                 >
                   About
@@ -128,10 +132,43 @@ export const HomeOwnerProfile = () => {
             </div>
           )}
           {selectedTab === 'About' && (
-            <div>
-              <div>
-                <h1>About me </h1>
-                <p>John Doe</p>
+            <div className='text-left container mt-4 mx-auto px-4'>
+              <div className='w-full'>
+                {aboutData.about.map((aboutD) => (
+                  <div className='flex grid grid-rows-2 grid-cols-3 gap-4 w-full'>
+                    <div className='flex grid grid-rows-2 col-span-2' key={aboutD.id}>
+                   <span className='font-bold'>About Me:</span>
+                   <span>{aboutD.aboutDescription}</span>
+                  <span className='mt-5 font-bold'>Skills:</span>
+                   <div className="mt-2 flex items-center gap-4"> 
+               {filters.tag.map((tags)=>(
+                  <span className="active:text-primary hover:text-primary hover:border-primary active:border-primary cursor-pointer rounded-[20px] border border-gray-800/10 px-2 py-2 text-sm font-medium" 
+                    key={tags}>{tags}</span>
+                    ))}
+                    </div>
+                   </div>
+                      <div className='grid gap-2 font-bold'>
+                       <button className='bg-blue-100 px-4 py-2 border-2 border-sky-200 rounded-lg hover:bg-sky-500 flex-row flex items-center'>
+                        <div className='flex gap-2'>
+                          <img src={FacebookIcon}/>
+                            Facebook
+                        </div>
+                       </button>
+                       <button className='bg-gradient-to-r from-sky-100 via-red-100 to-green-100 px-4 border-2 border-sky-200 py-2 rounded-lg hover:bg-sky-500 flex-row flex items-center'>
+                        <div className='flex gap-2'>
+                          <img src={GmailIcon}/>
+                            Gmail
+                        </div>
+                       </button>
+                       <button className='bg-blue-100 px-4 py-2 border-2 border-sky-200 rounded-lg hover:bg-sky-500 flex-row flex items-center'>
+                        <div className='flex gap-2'>
+                          <img src={LinkedInIcon}/>
+                            LinkedIn
+                        </div>
+                       </button>
+                     </div>
+                  </div>
+                  ))}
               </div>
             </div>
           )}

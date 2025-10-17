@@ -1,7 +1,7 @@
 import React from 'react';
 
 import { Badge } from '../badge/Badge';
-import { Button } from '../buttons/button';
+import { Button } from '../buttons/Button';
 import dollarIcon from '../../../assets/icons/dollar.svg';
 import locationIcon from '../../../assets/icons/location.svg';
 import savedIcon from '../../../assets/icons/saved.svg';

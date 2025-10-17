@@ -72,4 +72,13 @@ export const profiles = {
     likes: 3204 ,
   }
   ]
-}
+};
+
+export const aboutData = {
+  about: [
+    {
+      id: 1,
+      aboutDescription: ' Add something about you.',
+    }
+  ],
+};
