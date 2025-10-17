@@ -142,25 +142,25 @@ export const HomeOwnerProfile = () => {
                   <span className='mt-5 font-bold'>Skills:</span>
                    <div className="mt-2 flex items-center gap-4"> 
                {filters.tag.map((tags)=>(
-                  <span className="active:text-primary hover:text-primary hover:border-primary active:border-primary cursor-pointer rounded-[20px] border border-gray-800/10 px-2 py-2 text-sm font-medium" 
+                  <span className="active:text-primary hover:text-primary cursor-pointer rounded-[20px] px-2 py-2 text-sm font-small bg-gray-100" 
                     key={tags}>{tags}</span>
                     ))}
                     </div>
                    </div>
                       <div className='grid gap-2 font-bold'>
-                       <button className='bg-blue-100 px-4 py-2 border-2 border-sky-200 rounded-lg hover:bg-sky-500 flex-row flex items-center'>
+                       <button className='bg-blue-100 px-4 py-4 border-2 border-sky-200 rounded-lg hover:bg-sky-500 flex-row flex items-center'>
                         <div className='flex gap-2'>
                           <img src={FacebookIcon}/>
                             Facebook
                         </div>
                        </button>
-                       <button className='bg-gradient-to-r from-sky-100 via-red-100 to-green-100 px-4 border-2 border-sky-200 py-2 rounded-lg hover:bg-sky-500 flex-row flex items-center'>
+                       <button className='bg-gradient-to-r from-sky-100 via-red-100 to-green-100 px-4 border-2 border-sky-200 py-4 rounded-lg hover:bg-sky-500 flex-row flex items-center'>
                         <div className='flex gap-2'>
                           <img src={GmailIcon}/>
                             Gmail
                         </div>
                        </button>
-                       <button className='bg-blue-100 px-4 py-2 border-2 border-sky-200 rounded-lg hover:bg-sky-500 flex-row flex items-center'>
+                       <button className='bg-blue-100 px-4 py-4 border-2 border-sky-200 rounded-lg hover:bg-sky-500 flex-row flex items-center'>
                         <div className='flex gap-2'>
                           <img src={LinkedInIcon}/>
                             LinkedIn
