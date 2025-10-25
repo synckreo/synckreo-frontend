@@ -3,6 +3,7 @@ import { MainLayout } from '../components/layouts/MainLayout';
 import { Home } from '../pages/home/Home';
 import { Explore } from '../pages/explore/Explore';
 import { HomeOwnerProfile } from '../pages/homeownerprofile/HomeOwnerProfile';
+import { HomeOwnerExplore } from '../pages/explore/HomeOwnerExplore';
 import { ProfilePage } from '../pages/profile/ProfilePage';
 
 export const AppRoutes = () => {
@@ -11,10 +12,8 @@ export const AppRoutes = () => {
       <Route element={<MainLayout />}>
         <Route path="/" element={<Home />} />
         <Route path="/explore" element={<Explore />} />
-        <Route
-          path="/homeownerprofile"
-          element={<HomeOwnerProfile />}
-        />
+        <Route path="/homeownerprofile" element={<HomeOwnerProfile />} />
+        <Route path="/explore/homeownerexplore" element={<HomeOwnerExplore />} />
         <Route path="/profile" element={<ProfilePage />} />
       </Route>
     </Routes>
