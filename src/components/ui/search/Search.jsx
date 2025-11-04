@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Button } from '../buttons/button';
+import { Button } from '../buttons/Button';
 import searchIcon from '../../../assets/icons/search-icon.svg';
 import arrowDownIcon from '../../../assets/icons/arrow-down.svg';
 

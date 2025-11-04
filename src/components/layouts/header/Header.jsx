@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 import { Navbar } from '../navbar/Navbar';
-import { Button } from '../../ui/buttons/button';
+import { Button } from '../../ui/buttons/Button';
 
 export const Header = () => {
   const location = useLocation();
@@ -38,7 +38,7 @@ export const Header = () => {
 
   return (
     <header
-      className={`fixed top-0 left-0 w-full z-50 py-3.5 px-6 flex justify-between items-center transition-all duration-300 ${headerClass}`}
+      className={`fixed top-0 left-0 z-50 flex w-full items-center justify-between px-6 py-3.5 transition-all duration-300 ${headerClass}`}
     >
       <img
         src="/_main_logo_/logo_synckreo_colored.svg"
