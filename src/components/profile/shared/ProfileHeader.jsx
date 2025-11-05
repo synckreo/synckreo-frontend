@@ -3,8 +3,7 @@ import React from 'react';
 import { Badge } from '../../ui/badge/Badge';
 import { Button } from '../../../components/ui/buttons/Button';
 
-import locationIcon from '../../../assets/icons/location.svg';
-import starIcon from '../../../assets/icons/star.svg';
+import { ICONS } from '../../../constants/icons';
 
 export const ProfileHeader = ({
   location,
@@ -36,7 +35,7 @@ export const ProfileHeader = ({
       <div className="flex gap-2">
         <div className="flex items-center gap-2">
           <span>
-            <img src={locationIcon} alt="" />
+            <img src={ICONS.location} alt="" />
           </span>
           <span>
             {city}, {state}
@@ -45,7 +44,7 @@ export const ProfileHeader = ({
         <div className="flex gap-2">
           <div className="flex items-center gap-2">
             <span>
-              <img src={starIcon} alt="" />
+              <img src={ICONS.star} alt="" />
             </span>
             <span>{rating}</span>
           </div>

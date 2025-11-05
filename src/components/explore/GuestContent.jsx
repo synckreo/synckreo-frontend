@@ -2,9 +2,10 @@ import React from 'react';
 import { Search } from '../../components/ui/search/Search';
 import { Card } from '../../components/ui/card/Card';
 import { Button } from '../../components/ui/buttons/Button';
+
+import { ICONS } from '../../constants/icons';
 import { data } from '../../assets/dummy/card';
 import explore_page_banner from '../../assets/images/explore_page_banner.webp';
-import arrowIcon from '../../assets/icons/arrow.svg';
 
 export const GuestContent = () => (
   <main className="container mx-auto px-1 sm:px-2 lg:px-4">
@@ -78,7 +79,11 @@ export const GuestContent = () => (
             variant="explore"
             size="contact"
             icon={
-              <img src={arrowIcon} alt="arrow" className="h-4 w-4" />
+              <img
+                src={ICONS.arrow}
+                alt="arrow"
+                className="h-4 w-4"
+              />
             }
             iconPosition="right"
           />
@@ -114,7 +119,11 @@ export const GuestContent = () => (
             variant="explore"
             size="contact"
             icon={
-              <img src={arrowIcon} alt="arrow" className="h-4 w-4" />
+              <img
+                src={ICONS.arrow}
+                alt="arrow"
+                className="h-4 w-4"
+              />
             }
             iconPosition="right"
           />

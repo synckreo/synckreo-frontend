@@ -1,6 +1,5 @@
 import React from 'react';
-import eye from '../../../assets/icons/eye.svg';
-import heart from '../../../assets/icons/heart.svg';
+import { ICONS } from '../../../constants/icons';
 
 export const ProjectCard = ({
   projectBackgroundImg,
@@ -21,11 +20,11 @@ export const ProjectCard = ({
 
         <div className="flex gap-2">
           <div className="flex items-center gap-1">
-            <img src={heart} alt="heart" />
+            <img src={ICONS.heart} alt="heart" />
             <span className="text-sm font-medium">{likes}</span>
           </div>
           <div className="flex items-center gap-1">
-            <img src={eye} alt="eye" />
+            <img src={ICONS.eye} alt="eye" />
             <span className="text-sm font-medium">{views}</span>
           </div>
         </div>
