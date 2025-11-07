@@ -21,6 +21,7 @@ export const HomeOwnerCard = ({
 
 }) => {
   return (
+    <>
     <div className="bg-gray-100 p-4 w-full rounded-lg">
       <div className="flex justify-between mb-2">
         <img src={image} alt={"Avatar"} className="w-10 h-10 rounded-full mx-2" />
@@ -95,7 +96,7 @@ export const HomeOwnerCard = ({
             key={tags}>{tags}</span>
         ))}
       </div>
-
     </div>
+    </>
   );
 };
